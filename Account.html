@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:400,400i,700,900">
+    <link rel="stylesheet" href="account.css"> 
+    <title>Login to Foodie</title>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo"><a href="#">Foodie.</a></div>
+        <nav>
+            <ul>
+                <li><a href="main.html">Home</a></li>
+                <li><a href="Discover.html">Discover</a></li>
+                <li><a href="Account.html" class="active">Account</a></li> 
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="login-form">
+            <h1>Login to Foodie</h1>
+
+            <form id="loginForm" action="#" method="post">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+
+                <button type="submit" class="button">Login</button>
+            </form>
+
+            <p>Don't have an account? <a href="createaccount.html">Create one here</a>.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2023 Foodie. Enterprises</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var loginForm = document.getElementById('loginForm');
+            loginForm.addEventListener('submit', function (event) {
+                event.preventDefault();
+                window.location.href = 'map.html';
+            });
+        });
+    </script>
+
+</body>
+
+</html>

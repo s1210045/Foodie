@@ -1,0 +1,151 @@
+body {
+    font-family: "Poppins", system-ui;
+    background-image: url("https://assets.codepen.io/18050/ellipse-bg.png");
+    background-repeat: no-repeat;
+    background-size: contain; 
+    background-position: top center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo a {
+    font-weight: 900;
+    font-size: 1.5rem;
+    color: #65982f;
+    text-decoration: none;
+    align-items: center;
+}
+
+.logo a:hover {
+    color: brown;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 900px;
+    margin: 1rem auto;
+    padding: 0 1rem;
+}
+
+header * {
+   
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    gap: 20px;
+    text-align: center;
+}
+
+nav a {
+    color: #333;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #65982f;
+}
+
+nav a.active {
+    border-bottom: 2px solid #65982f;
+}
+
+main {
+    display: flex;
+    gap: 2rem;
+    max-width: 900px;
+    padding: 0 1rem;
+    margin: 2rem auto 5rem;
+ 
+}
+
+.main-photo {
+    max-width: 50%;
+   
+}
+
+.main-intro {
+    max-width: 50%;
+   
+}
+
+.main-intro p {
+    font-size: 1.1rem;
+    line-height: 2;
+    margin-bottom: 4rem;
+}
+
+main h1 {
+    color: #65982f;
+    font-size: 3rem;
+    letter-spacing: -2px;
+}
+
+.button {
+    background-color: #65982f;
+    color: white;
+    padding: 1rem 3rem;
+    border-radius: 100px;
+}
+
+a.button {
+    text-decoration: none;
+}
+
+.button:hover {
+    background-color: brown;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+footer p {
+    text-align: center;
+    font-size: 0.8rem;
+    font-weight: 400;
+}
+
+.main-photo img {
+    transition: -webkit-transform 30s; 
+    transition: transform 30s;
+}
+
+.main-photo img:hover {
+    -ms-transform: rotate(360deg); 
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+}
+
+@media screen and (max-width: 640px) {
+    body {
+       
+    }
+
+    header {
+        display: block;
+        text-align: center;
+    }
+
+    nav ul {
+        justify-content: center;
+    }
+
+    main {
+        flex-direction: column;
+    }
+
+    .main-photo {
+        max-width: 100%;
+    }
+
+    .main-intro {
+        max-width: 100%;
+    }
+}
