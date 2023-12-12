@@ -5,33 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="main.css"> 
+    <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:400,400i,700,900">
-    <title>Contact Foodie Customer Service</title>
-    <script>
-        function submitForm() {
-            var form = document.getElementById("contactForm");
-            var formData = new FormData(form);
-
-            fetch('https://formspree.io/f/meqbywje', {
-                method: 'POST',
-                body: formData,
-                headers: {
-                    'Accept': 'application/json'
-                }
-            })
-            .then(response => response.json())
-            .then(data => {
-                console.log(data);
-                alert("Thank you! Our customer service team will assist you shortly.");
-                // You might want to redirect or perform additional actions here
-            })
-            .catch(error => {
-                console.error('Error:', error);
-    
-            });
-        }
-    </script>
+    <link rel="stylesheet" href="account.css"> 
+    <title>Create Foodie Account</title>
 </head>
 
 <body>
@@ -40,39 +17,40 @@
         <div class="logo"><a href="#">Foodie.</a></div>
         <nav>
             <ul>
-                <li><a href="main.html">Home</a></li>
+                <li><a href="main.html">Main</a></li>
                 <li><a href="Discover.html">Discover</a></li>
-                <li><a href="CreateAccount.html">Account</a></li>
-                <li><a href="Contact.html" class="active">Contact Us</a></li>
+                <li><a href="account.html">Login</a></li> 
+                <li><a href="contact.html">Contact Us</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section class="contact-form">
-            <h1>Contact Foodie Customer Service</h1>
-            <p>Have questions or need assistance with your account? Fill out the form below, and our customer service team will get back to you.</p>
+        <section class="create-account-form">
+            <h1>Create Foodie Account</h1>
 
-            <form id="contactForm" onsubmit="submitForm(); return false;">
-                <label for="name">Your Name:</label>
-                <input type="text" id="name" name="name" required>
-
-                <label for="email">Your Email:</label>
+            <form action="#" method="post">
+                <label for="email">Email:</label>
                 <input type="email" id="email" name="email" required>
 
-                <label for="message">Your Message:</label>
-                <textarea id="message" name="message" rows="4" required></textarea>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
 
-                <button type="submit" class="button">Send Message</button>
+                <label for="confirm-password">Confirm Password:</label>
+                <input type="password" id="confirm-password" name="confirm-password" required>
+
+                <button type="submit" class="button">Create Account</button>
             </form>
 
-            <p>For immediate assistance, you can also email us at <a href="mailto:customerservice@foodie.com">customerservice@foodie.com</a>.</p>
+            <p>Already have an account? <a href="account.html">Login here</a>.</p>
         </section>
     </main>
 
     <footer>
         <p>© 2023 Foodie. Enterprises</p>
     </footer>
+
 </body>
 
 </html>
+
