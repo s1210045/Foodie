@@ -7,8 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:400,400i,700,900">
-    <link rel="stylesheet" href="account.css"> 
+    <link rel="stylesheet" href="account.css">
     <title>Create Foodie Account</title>
+    <script>
+        function displayThankYouMessage() {
+            alert("Thank you! Now please login.");
+        }
+    </script>
 </head>
 
 <body>
@@ -19,7 +24,6 @@
             <ul>
                 <li><a href="main.html">Main</a></li>
                 <li><a href="account.html">Login</a></li> 
-              
             </ul>
         </nav>
     </header>
@@ -28,7 +32,7 @@
         <section class="create-account-form">
             <h1>Create Foodie Account</h1>
 
-            <form action="#" method="post">
+            <form action="#" method="post" onsubmit="displayThankYouMessage()">
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="email" required>
 
