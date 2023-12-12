@@ -2,70 +2,52 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="main.css"> 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:400,400i,700,900">
-    <title>Contact Foodie</title>
-    <script>
-        function submitForm() {
-            var form = document.getElementById("myForm");
-            var formData = new FormData(form);
-
-            fetch('https://formspree.io/f/meqbywje', {
-                method: 'POST',
-                body: formData,
-                headers: {
-                    'Accept': 'application/json'
-                }
-            })
-            .then(response => response.json())
-            .then(data => {
-                // Handle the response as needed
-                console.log(data);
-                // Redirect to the main page after successful form submission
-                window.location.href = 'main.html';
-            })
-            .catch(error => {
-                console.error('Error:', error);
-            });
-        }
-    </script>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="main.css"> 
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:400,400i,700,900">
+	<title>Contact Foodie</title>
 </head>
 
 <body>
 
-    <header>
-        <div class="logo"><a href="#">Foodie.</a></div>
-        <nav>
-            <ul>
-                <li><a href="main.html">Home</a></li>
-                <li><a href="Contact.html" class="active">Contact Us</a></li>
-            </ul>
-        </nav>
-    </header>
+	<header>
+		<div class="logo"><a href="#">Foodie.</a></div>
+		<nav>
+			<ul>
+				<li><a href="main.html">Home</a></li>
+				<li><a href="Contact.html" class="active">Contact Us</a></li>
+			</ul>
+		</nav>
+	</header>
 
-    <main>
-        <section class="contact-form">
-            <h1>Contact Foodie</h1>
-            <p>Have questions or feedback? Reach out to us!</p>
+	<main>
+		<section class="contact-form">
+			<h1>Contact Foodie</h1>
+			<p>Have questions or feedback? Reach out to us!</p>
 
-            <form id="myForm" onsubmit="submitForm(); return false;">
-                <!-- Your form fields here -->
-                <button type="submit" class="button">Send Message</button>
-            </form>
-        </section>
-    </main>
+			<form action="#" method="post">
+				<label for="name">Your Name:</label>
+				<input type="text" id="name" name="name" required>
 
-    <footer>
-        <p>© 2023 Foodie. Enterprises</p>
-    </footer>
+				<label for="email">Your Email:</label>
+				<input type="email" id="email" name="email" required>
+
+				<label for="message">Your Message:</label>
+				<textarea id="message" name="message" rows="4" required></textarea>
+
+				<button type="submit" class="button">Send Message</button>
+			</form>
+		</section>
+	</main>
+
+	<footer>
+		<p>© 2023 Foodie. Enterprises</p>
+	</footer>
 </body>
 
 </html>
-
-
 
 
 
